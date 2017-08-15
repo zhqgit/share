@@ -38,6 +38,9 @@ public class UserController {
     @ResponseBody
     public ResponseFormat<User> geUserInfo(HttpSession session){
         User user = (User) session.getAttribute(Const.CURRENT_USER);
-        return null;
+        if(user!=null){
+            return ResponseFormat.createBySuccess(user);
+        }
+        return ResponseFormat.createByErrorMessage("用户未登录，获取用户信息失败");
     }
 }
