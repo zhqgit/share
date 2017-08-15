@@ -41,6 +41,7 @@ public class UserController {
         if(user!=null){
             return ResponseFormat.createBySuccess(user);
         }
+        //test
         return ResponseFormat.createByErrorMessage("用户未登录，获取用户信息失败");
     }
 }
