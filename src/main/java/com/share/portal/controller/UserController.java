@@ -37,6 +37,7 @@ public class UserController {
     @RequestMapping(value="get_user_info.do",method = RequestMethod.POST)
     @ResponseBody
     public ResponseFormat<User> geUserInfo(HttpSession session){
+        User user = (User) session.getAttribute(Const.CURRENT_USER);
         return null;
     }
 }
