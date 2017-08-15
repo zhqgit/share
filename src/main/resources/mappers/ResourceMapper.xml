@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.share.portal.dao.ResourceMapper" >
+  <resultMap id="BaseResultMap" type="com.share.portal.pojo.Resource" >
+    <constructor >
+      <idArg column="id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="NAME" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="category_id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="size" jdbcType="DOUBLE" javaType="java.lang.Double" />
+      <arg column="description" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="user_id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="personal_category_id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="pageview" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="download_count" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="TYPE" jdbcType="TINYINT" javaType="java.lang.Byte" />
+      <arg column="resource_address" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="is_delete" jdbcType="TINYINT" javaType="java.lang.Byte" />
+      <arg column="created" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+      <arg column="updated" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, NAME, category_id, size, description, user_id, personal_category_id, pageview, 
+    download_count, TYPE, resource_address, is_delete, created, updated
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from share_resource
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from share_resource
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.share.portal.pojo.Resource" >
+    insert into share_resource (id, NAME, category_id, 
+      size, description, user_id, 
+      personal_category_id, pageview, download_count, 
+      TYPE, resource_address, is_delete, 
+      created, updated)
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{categoryId,jdbcType=INTEGER}, 
+      #{size,jdbcType=DOUBLE}, #{description,jdbcType=VARCHAR}, #{userId,jdbcType=INTEGER}, 
+      #{personalCategoryId,jdbcType=INTEGER}, #{pageview,jdbcType=INTEGER}, #{downloadCount,jdbcType=INTEGER}, 
+      #{type,jdbcType=TINYINT}, #{resourceAddress,jdbcType=VARCHAR}, #{isDelete,jdbcType=TINYINT}, 
+      #{created,jdbcType=TIMESTAMP}, #{updated,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.share.portal.pojo.Resource" >
+    insert into share_resource
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="name != null" >
+        NAME,
+      </if>
+      <if test="categoryId != null" >
+        category_id,
+      </if>
+      <if test="size != null" >
+        size,
+      </if>
+      <if test="description != null" >
+        description,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="personalCategoryId != null" >
+        personal_category_id,
+      </if>
+      <if test="pageview != null" >
+        pageview,
+      </if>
+      <if test="downloadCount != null" >
+        download_count,
+      </if>
+      <if test="type != null" >
+        TYPE,
+      </if>
+      <if test="resourceAddress != null" >
+        resource_address,
+      </if>
+      <if test="isDelete != null" >
+        is_delete,
+      </if>
+      <if test="created != null" >
+        created,
+      </if>
+      <if test="updated != null" >
+        updated,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="categoryId != null" >
+        #{categoryId,jdbcType=INTEGER},
+      </if>
+      <if test="size != null" >
+        #{size,jdbcType=DOUBLE},
+      </if>
+      <if test="description != null" >
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="personalCategoryId != null" >
+        #{personalCategoryId,jdbcType=INTEGER},
+      </if>
+      <if test="pageview != null" >
+        #{pageview,jdbcType=INTEGER},
+      </if>
+      <if test="downloadCount != null" >
+        #{downloadCount,jdbcType=INTEGER},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=TINYINT},
+      </if>
+      <if test="resourceAddress != null" >
+        #{resourceAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="isDelete != null" >
+        #{isDelete,jdbcType=TINYINT},
+      </if>
+      <if test="created != null" >
+        #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updated != null" >
+        #{updated,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.share.portal.pojo.Resource" >
+    update share_resource
+    <set >
+      <if test="name != null" >
+        NAME = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="categoryId != null" >
+        category_id = #{categoryId,jdbcType=INTEGER},
+      </if>
+      <if test="size != null" >
+        size = #{size,jdbcType=DOUBLE},
+      </if>
+      <if test="description != null" >
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="personalCategoryId != null" >
+        personal_category_id = #{personalCategoryId,jdbcType=INTEGER},
+      </if>
+      <if test="pageview != null" >
+        pageview = #{pageview,jdbcType=INTEGER},
+      </if>
+      <if test="downloadCount != null" >
+        download_count = #{downloadCount,jdbcType=INTEGER},
+      </if>
+      <if test="type != null" >
+        TYPE = #{type,jdbcType=TINYINT},
+      </if>
+      <if test="resourceAddress != null" >
+        resource_address = #{resourceAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="isDelete != null" >
+        is_delete = #{isDelete,jdbcType=TINYINT},
+      </if>
+      <if test="created != null" >
+        created = #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updated != null" >
+        updated = #{updated,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.share.portal.pojo.Resource" >
+    update share_resource
+    set NAME = #{name,jdbcType=VARCHAR},
+      category_id = #{categoryId,jdbcType=INTEGER},
+      size = #{size,jdbcType=DOUBLE},
+      description = #{description,jdbcType=VARCHAR},
+      user_id = #{userId,jdbcType=INTEGER},
+      personal_category_id = #{personalCategoryId,jdbcType=INTEGER},
+      pageview = #{pageview,jdbcType=INTEGER},
+      download_count = #{downloadCount,jdbcType=INTEGER},
+      TYPE = #{type,jdbcType=TINYINT},
+      resource_address = #{resourceAddress,jdbcType=VARCHAR},
+      is_delete = #{isDelete,jdbcType=TINYINT},
+      created = #{created,jdbcType=TIMESTAMP},
+      updated = #{updated,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
