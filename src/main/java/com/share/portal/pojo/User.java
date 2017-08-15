@@ -24,7 +24,6 @@ public class User {
     private Date created;
 
     private Date updated;
-
     public User(Integer id, String username, String password, String userNumber, Byte role, String email, Short grade, String major, String avatar, Date created, Date updated) {
         this.id = id;
         this.username = username;
