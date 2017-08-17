@@ -1,6 +1,9 @@
 package com.share.portal.dao;
 
+import com.share.portal.pojo.ResourceFavorite;
 import com.share.portal.pojo.Topics;
+
+import java.util.List;
 
 public interface TopicsMapper {
     int deleteByPrimaryKey(Integer id);
@@ -14,4 +17,6 @@ public interface TopicsMapper {
     int updateByPrimaryKeySelective(Topics record);
 
     int updateByPrimaryKey(Topics record);
+
+    List<ResourceFavorite> selectTopicsFavoriteById(int userId);
 }

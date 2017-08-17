@@ -5,13 +5,8 @@
     <constructor >
       <idArg column="id" jdbcType="INTEGER" javaType="java.lang.Integer" />
       <arg column="username" jdbcType="VARCHAR" javaType="java.lang.String" />
-<<<<<<< HEAD
       <arg column="password" jdbcType="VARCHAR" javaType="java.lang.String" />
       <arg column="user_number" jdbcType="CHAR" javaType="java.lang.String" />
-=======
-      <arg column="PASSWORD" jdbcType="VARCHAR" javaType="java.lang.String" />
-      <arg column="number" jdbcType="CHAR" javaType="java.lang.String" />
->>>>>>> bin
       <arg column="role" jdbcType="TINYINT" javaType="java.lang.Byte" />
       <arg column="email" jdbcType="VARCHAR" javaType="java.lang.String" />
       <arg column="grade" jdbcType="SMALLINT" javaType="java.lang.Short" />
@@ -22,12 +17,8 @@
     </constructor>
   </resultMap>
   <sql id="Base_Column_List" >
-<<<<<<< HEAD
-    id, username, password, user_number, role, email, grade, major, avatar, created, 
+    id, username, password, user_number, role, email, grade, major, avatar, created,
     updated
-=======
-    id, username, PASSWORD, number, role, email, grade, major, avatar, created, updated
->>>>>>> bin
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
@@ -40,8 +31,7 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.share.portal.pojo.User" >
-<<<<<<< HEAD
-    insert into share_user (id, username, password, 
+    insert into share_user (id, username, password,
       user_number, role, email, 
       grade, major, avatar, 
       created, updated)
@@ -49,16 +39,6 @@
       #{userNumber,jdbcType=CHAR}, #{role,jdbcType=TINYINT}, #{email,jdbcType=VARCHAR}, 
       #{grade,jdbcType=SMALLINT}, #{major,jdbcType=VARCHAR}, #{avatar,jdbcType=VARCHAR}, 
       #{created,jdbcType=TIMESTAMP}, #{updated,jdbcType=TIMESTAMP})
-=======
-    insert into share_user (id, username, PASSWORD, 
-      number, role, email, grade, 
-      major, avatar, created, 
-      updated)
-    values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
-      #{number,jdbcType=CHAR}, #{role,jdbcType=TINYINT}, #{email,jdbcType=VARCHAR}, #{grade,jdbcType=SMALLINT}, 
-      #{major,jdbcType=VARCHAR}, #{avatar,jdbcType=VARCHAR}, #{created,jdbcType=TIMESTAMP}, 
-      #{updated,jdbcType=TIMESTAMP})
->>>>>>> bin
   </insert>
   <insert id="insertSelective" parameterType="com.share.portal.pojo.User" >
     insert into share_user
@@ -70,17 +50,10 @@
         username,
       </if>
       <if test="password != null" >
-<<<<<<< HEAD
         password,
       </if>
       <if test="userNumber != null" >
         user_number,
-=======
-        PASSWORD,
-      </if>
-      <if test="number != null" >
-        number,
->>>>>>> bin
       </if>
       <if test="role != null" >
         role,
@@ -114,13 +87,8 @@
       <if test="password != null" >
         #{password,jdbcType=VARCHAR},
       </if>
-<<<<<<< HEAD
       <if test="userNumber != null" >
         #{userNumber,jdbcType=CHAR},
-=======
-      <if test="number != null" >
-        #{number,jdbcType=CHAR},
->>>>>>> bin
       </if>
       <if test="role != null" >
         #{role,jdbcType=TINYINT},
@@ -152,17 +120,10 @@
         username = #{username,jdbcType=VARCHAR},
       </if>
       <if test="password != null" >
-<<<<<<< HEAD
         password = #{password,jdbcType=VARCHAR},
       </if>
       <if test="userNumber != null" >
         user_number = #{userNumber,jdbcType=CHAR},
-=======
-        PASSWORD = #{password,jdbcType=VARCHAR},
-      </if>
-      <if test="number != null" >
-        number = #{number,jdbcType=CHAR},
->>>>>>> bin
       </if>
       <if test="role != null" >
         role = #{role,jdbcType=TINYINT},
@@ -191,13 +152,8 @@
   <update id="updateByPrimaryKey" parameterType="com.share.portal.pojo.User" >
     update share_user
     set username = #{username,jdbcType=VARCHAR},
-<<<<<<< HEAD
       password = #{password,jdbcType=VARCHAR},
       user_number = #{userNumber,jdbcType=CHAR},
-=======
-      PASSWORD = #{password,jdbcType=VARCHAR},
-      number = #{number,jdbcType=CHAR},
->>>>>>> bin
       role = #{role,jdbcType=TINYINT},
       email = #{email,jdbcType=VARCHAR},
       grade = #{grade,jdbcType=SMALLINT},
@@ -207,7 +163,6 @@
       updated = #{updated,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}
   </update>
-<<<<<<< HEAD
 
   <select id="checkUserMessage" resultType="int" parameterType="string">
     SELECT  COUNT(*) FROM share_user
@@ -223,6 +178,9 @@
     OR user_number = #{userMessage}
     AND password = #{md5Password}
   </select>
-=======
->>>>>>> bin
+
+  <select id="getUserEmail" resultType="string" parameterType="int">
+    SELECT email FROM share_user
+    WHERE id = #{userId}
+  </select>
 </mapper>

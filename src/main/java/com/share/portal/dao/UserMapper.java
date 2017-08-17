@@ -20,4 +20,5 @@ public interface UserMapper {
 
     User CheckPassword(@Param("userMessage")String userMessage,@Param("md5Password")String md5Password);
 
+    String getUserEmail(int userId);
 }

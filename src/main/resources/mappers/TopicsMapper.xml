@@ -141,4 +141,12 @@
       updated = #{updated,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <select id="selectTopicsFavoriteById" resultMap="BaseResultMap" parameterType="int">
+    SELECT
+    <include refid="Base_Column_List"/>
+    FROM share_topics
+    WHERE id IN
+    (SELECT topics_id FROM share_topics_favorite WHERE user_id = #{userId})
+  </select>
 </mapper>

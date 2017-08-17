@@ -198,4 +198,12 @@
       updated = #{updated,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <select id="selectResourceFavoriteById" resultMap="BaseResultMap" parameterType="int">
+    SELECT
+    <include refid="Base_Column_List"/>
+    FROM share_resource
+    WHERE id IN
+    (SELECT resource_id FROM share_resource_favorite WHERE user_id = #{userId})
+  </select>
 </mapper>
