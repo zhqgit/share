@@ -1,0 +1,66 @@
+{
+  "id": 1,
+  "username": "卜冠今",
+  "col_category": [
+    {
+      "col_id": 1,
+      "col_name": "心理学",
+      "col_count": 20,
+      "update_time": "2017-08-08 14:41:57",
+      "content": {
+        "res_content": [
+          {
+            "resource_id": 1,
+            "resource_name": "jdk1.6",
+            "category_name": "学习",
+            "personal_category_name": "java",
+            "resource_size": "40M",
+            "collect_time": "2017-08-08 14:41:57"
+          },
+          {
+            "resource_id": 1,
+            "resource_name": "jdk1.6",
+            "category_name": "学习",
+            "personal_category_name": "java",
+            "resource_size": "40M",
+            "collect_time": "2017-08-08 14:41:57"
+          },
+          {
+            "resource_id": 1,
+            "resource_name": "jdk1.6",
+            "category_name": "学习",
+            "personal_category_name": "java",
+            "resource_size": "40M",
+            "collect_time": "2017-08-08 14:41:57"
+          }
+        ],
+        "pas_content": [
+          {
+            "topics_id": 1,
+            "topics_name": "js制作滚动窗",
+            "category_name": "学习",
+            "personal_category_name": "js",
+            "resource_size": "40M",
+            "collect_time": "2017-08-08 14:41:57"
+          },
+          {
+            "topics_id": 1,
+            "topics_name": "js制作滚动窗",
+            "category_name": "学习",
+            "personal_category_name": "js",
+            "resource_size": "40M",
+            "collect_time": "2017-08-08 14:41:57"
+          },
+          {
+            "topics_id": 1,
+            "topics_name": "js制作滚动窗",
+            "category_name": "学习",
+            "personal_category_name": "js",
+            "resource_size": "40M",
+            "collect_time": "2017-08-08 14:41:57"
+          }
+        ]
+      }
+    }
+  ]
+}

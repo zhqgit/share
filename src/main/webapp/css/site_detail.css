@@ -1,0 +1,32 @@
+main{
+	width: 80%;
+	margin: 0 auto;
+}
+
+.school-detail{
+	width: 70%;
+	float: left;
+}
+
+.school-detail img{
+	float: left;
+	width:440px;
+	height: 240px;
+	margin: 15px;
+}
+
+.school-detail p{
+	text-indent: 30px;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 25px;
+	color: #666666;
+}
+
+.page-right{
+	float: left;
+	width: 25%;
+	background-color: #000;
+}
+
+

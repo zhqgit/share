@@ -1,0 +1,228 @@
+/*
+------------------------------
+Author: zhqGit
+Updated: 8月8号
+
+
+COLORS
+------------------------------
+ */
+
+
+
+
+/*-------------Main---------------*/
+
+
+/*-------------Banner-------------*/
+
+main{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.p_banner{
+    margin-bottom: 3em;
+}
+
+.banner .slider {
+    width: 60%;
+    height: 500px;
+    /* 容器内图片向左浮动，超出部分不显示 */
+    overflow: hidden;
+    position: relative;
+    /* border: 1px solid #000; */
+    float: right;
+}
+
+.list_img {
+    width: 4800px;
+    padding: 0px;
+    margin: 0px;
+    /* transition: all 2s; */
+    height: 534px;
+    position: absolute;
+    z-index: 1;
+}
+
+.li_img {
+    width: 800px;
+    float: left;
+    list-style: none;
+}
+
+
+/* 移入轮播区时显示控制器 */
+
+.slider:hover .arrows {
+    display: block;
+}
+
+.arrows {
+    z-index: 9999;
+    position: absolute;
+    padding-top: 170px;
+    width: 100%;
+    display: none;
+}
+
+.arrows span {
+    font-size: 1.5em;
+    color: seashell;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    /*background-color: #000;*/
+}
+
+
+/* 当鼠标移到控制滚动的标志时改变其透明度 */
+
+.arrows span:hover {
+    /*变小手*/
+    cursor: pointer;
+    background-color: rgba(192, 192, 192, 0.29);
+}
+
+
+.hot h3 {
+    /*background: url(../img/images/tips.png) left bottom no-repeat;*/
+    /*text-indent: 2.5em;*/
+    color: #1e50ae;
+    padding: .5em 0 .5em 3em;
+}
+
+.category h3:nth-child(2){
+    background: url(../img/res_set/web.svg) left bottom no-repeat;
+}
+
+.category h3:nth-child(3){
+    background: url(../img/res_set/scientific.svg) left bottom no-repeat;
+}
+
+.category h3:nth-child(4){
+    background: url(../img/res_set/exam.svg) left bottom no-repeat;
+}
+
+.category h3:nth-child(5){
+    background: url(../img/res_set/work.svg) left bottom no-repeat;
+}
+
+.category h3:nth-child(6){
+    background: url(../img/res_set/exe.svg) left bottom no-repeat;
+}
+
+.category h3:nth-child(7){
+    background: url(../img/res_set/dynamic.svg) left bottom no-repeat;
+}
+
+.hot h3 {
+    margin-bottom: 0;
+}
+
+.hot ul {
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.hot li {
+    list-style: none;
+    float: left;
+    font-size: 0.5em;
+    padding: 0 0.5em;
+}
+
+.hot li a{
+    font-size: 1.5em;
+}
+
+
+/*-------------Main---------------*/
+/*-------------Most-Download-------------*/
+
+
+
+.most-download ul{
+    margin: 0;
+    padding: 0;
+}
+
+
+.most-download li{
+    float: left;
+    width: 50%;
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+
+.most-download li h3{
+    margin: 0;
+}
+
+.most-download li p{
+    font-size: 13px;
+    overflow: hidden;
+    color: #666666
+}
+
+.most-download img{
+    float: left;
+    width: 250px;
+    height: 150px;
+    margin-right: 15px;
+}
+
+
+/*要先选中父级元素*/
+.most-download li:nth-child(even) img{
+    margin-left: 15px;
+}
+
+.most-download .view{
+    display: block;
+    /*width: 535px;*/
+    overflow: hidden;
+}
+
+.most-download .view span{
+    float: right;
+}
+
+/*
+-------------------------------------
+@Styles Main Header download_hot
+-------------------------------------
+*/
+.p_download_hot{
+    margin-bottom: 50px;
+    background-color: #FFFFFF;
+}
+
+
+
+
+
+/*
+----------------------------
+@extra 自己修改的
+----------------------------
+*/
+.ibox .ibox-content{
+    padding: 0;
+    border: 0;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+
+
+

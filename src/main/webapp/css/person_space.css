@@ -1,0 +1,122 @@
+
+/*.personal-header{*/
+	/*width: 65%;*/
+	/*margin: 0 auto;*/
+	/*border-radius: 1%;*/
+	/*background-color: #eaeaea;*/
+	/*box-shadow: 0 1px 3px rgba(234,234,234,.5);*/
+    /*box-sizing: border-box;*/
+/*}*/
+
+/*.personal-main{*/
+	/*width: 65%;*/
+	/*margin: 0 auto;*/
+	/*border-radius: 2px;*/
+    /*box-shadow: 0 1px 3px rgba(0,0,0,.1);*/
+    /*box-sizing: border-box;*/
+/*}*/
+
+/*.bck-pic{*/
+	/*background: url(../images/bck-pic.jpg) center no-repeat;*/
+	/*overflow: hidden;*/
+    /*background-size:cover;*/
+	/*width: 100%;*/
+	/*height: 240px;*/
+/*}*/
+
+/*.personal-header img{*/
+	/*width:160px;*/
+	/*height: 160px;*/
+	/*float: left;*/
+	/*position: relative;*/
+	/*top: -20px;*/
+	/*left: 20px;*/
+	/*border-radius: 5%;*/
+/*}*/
+
+/*.personal-detail{*/
+	/*float: left;*/
+	/*padding-left: 20px;*/
+/*}*/
+
+/*.personal-name{*/
+	/*font-size: 26px;*/
+	/*font-weight: 700;*/
+/*}*/
+
+/*.personal-intro{*/
+	/*font-size: 18px;*/
+	/*font-weight: normal;*/
+/*}*/
+
+/*.psmain-header ul{*/
+	/*border-bottom: 1px solid #f0f2f7;*/
+/*}*/
+
+/*.psmain-header ul li{*/
+	/*list-style: none;*/
+	/*display: inline-block;*/
+	/*height: 50px;*/
+	/*line-height: 50px;*/
+	/*width: 100px;*/
+/*}*/
+
+/*.psmain-header ul li a{*/
+	/*color: #000;*/
+/*}*/
+
+/*.psmain-container{*/
+	/*padding-left: 15px;*/
+/*}*/
+
+/*.psmain-container li{*/
+	/*list-style: none;*/
+    /*border-bottom: 1px solid #f0f2f7;*/
+    /*height: 100px;*/
+/*}*/
+
+/*.container-title{*/
+	/*font-size: 16px;*/
+/*}*/
+
+/*.psmain-container ul{*/
+	/*padding: 0;*/
+/*}*/
+
+/*.psmain-container ul h1{*/
+	/*font-size: 20px;*/
+
+/*}*/
+
+
+/*
+----------------------------------------------
+@Styles Tab-List  Hidden Button
+----------------------------------------------
+*/
+
+.tab_list_more{
+	float: left;
+}
+
+.tab_list_btn{
+	float: left;
+	/*visibility: hidden;*/
+	margin-left: -7.5em;
+}
+
+.tab_list_hidden{
+	opacity: 0;
+	width: 5em;
+}
+
+.profile-content button a{
+	color: #FFFFFF;
+}
+
+
+
+
+
+
+

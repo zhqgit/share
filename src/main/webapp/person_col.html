@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+
+    <title>主页</title>
+
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html"/>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="libs/bootstrap/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+    <!--site-->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/person_space.css">
+
+    <!-- jqgrid-->
+    <link href="css/plugins/jqgrid/ui.jqgrid.css?0820" rel="stylesheet">
+</head>
+<body class="gray-bg">
+
+
+<header>
+    <div class="logo">
+        <div class="row">
+            <div class="col-sm-8">
+                <h1>职业教育学院 <span>资源共享平台</span></h1>
+            </div>
+            <div class="col-sm-4">
+                <div>
+                    <a class="btn btn-default" href="login_v2.html" role="button">登录</a>
+                    <a class="btn btn-default" href="register.html" role="button">注册</a>
+                    <input type="" name="" placeholder="search">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <ul class="nav-container clearfix">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="site_detail.html">网站概况</a></li>
+        <li><a href="person_space.html">个人空间</a></li>
+        <li><a href="resource_share.html">资源共享</a></li>
+        <li><a href="student_linkup.html">交流学习</a></li>
+        <li><a href="msg_board.html">留言板</a></li>
+    </ul>
+</header>
+<main id="app">
+    <div class="wrapper wrapper-content">
+        <div class="row animated fadeInRight">
+            <div class="col-sm-4">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>个人资料</h5>
+                    </div>
+                    <div>
+                        <div class="ibox-content no-padding border-left-right">
+                            <img alt="image" class="img-responsive" src="img/profile_big.jpg">
+                        </div>
+                        <div class="ibox-content profile-content">
+                            <h4><strong>卜冠今</strong></h4>
+                            <p><i class="fa fa-map-marker"></i>湖北武汉</p>
+                            <h5>
+                                关于我
+                            </h5>
+                            <p>
+                                其实我是一个演员
+                            </p>
+                            <div class="row m-t-lg">
+                                <div class="col-sm-3">
+                                    <h5>&nbsp;&nbsp;<strong>资源</strong></h5>
+                                    <button type="button" class="btn btn-success m-r-sm"><a href="person_res.html" title="资源" name="resource">28</a></button>
+                                </div>
+                                <div class="col-sm-3">
+                                    <h5>&nbsp;&nbsp;<strong>帖子</strong></h5>
+                                    <button type="button" class="btn btn-warning m-r-sm"><a href="person_pas.html" title="帖子" name="passage">29</a></button>
+                                </div>
+                                <div class="col-sm-3">
+                                    <h5>&nbsp;<strong>关注了</strong></h5>
+                                    <button type="button" class="btn btn-info m-r-sm"><a href="person_fol.html" title="关注" name="follow">30</a></button>
+                                </div>
+                                <div class="col-sm-3">
+                                    <h5>&nbsp;<strong>关注者</strong></h5>
+                                    <button type="button" class="btn btn-danger m-r-sm"><a href="person_fol.html" title="关注" name="follow">31</a></button>
+                                </div>
+                            </div>
+                            <div class="user-button">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <button type="button" class="btn btn-primary btn-sm btn-block"><i class="fa fa-plus"></i> 关注TA</button>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <button type="button" class="btn btn-primary btn-sm btn-block"><i class="fa fa-envelope"></i> 发私信</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <ul class="nav nav-tabs">
+                    <li role="presentation" @click="active"><a href="person_res.html" title="资源" name="resource">资源</a></li>
+                    <li role="presentation" @click="active"><a href="person_pas.html" title="帖子" name="passage">帖子</a></li>
+                    <li class="dropdown" role="presentation" @click="active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">收藏 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">资源</a></li>
+                            <li><a href="#">帖子</a></li>
+                        </ul>
+                    </li>
+                    <li role="presentation" @click="active"><a href="person_fol.html" title="关注" name="follow">关注</a></li>
+                </ul>
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>TA的{{isActive}}</h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="profile.html#">
+                                <i class="fa fa-wrench"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li><a href="profile.html#">选项1</a>
+                                </li>
+                                <li><a href="profile.html#">选项2</a>
+                                </li>
+                            </ul>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <h4 class="m-t">高级用法</h4>
+
+
+                        <div class="jqGrid_wrapper">
+                            <table id="table_list_2"></table>
+                            <div id="pager_list_2"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</main>
+<footer>
+    <ul class="footer-nav">
+        <li>首页 |</li>
+        <li>网络概况 |</li>
+        <li>个人空间 |</li>
+        <li>资源共享 |</li>
+        <li>交流学习 |</li>
+        <li>学术座谈</li>
+    </ul>
+    <ul class="friends">
+        <li>手机版 |</li>
+        <li>管理登陆 |</li>
+        <li>职业教育学院 |</li>
+        <li>华南师范大学</li>
+    </ul>
+</footer>
+<!--site-->
+<script src="js/ajax/person_space.js"></script>
+
+
+<!-- 全局js -->
+<script src="libs/jquery/jquery.min.js?v=2.1.4"></script>
+<script src="libs/bootstrap/bootstrap.min.js?v=3.3.6"></script>
+
+
+<!-- 自定义js -->
+<script src="js/content.js?v=1.0.0"></script>
+
+<!-- jqGrid -->
+<script src="js/plugins/jqgrid/i18n/grid.locale-cn.js?0820"></script>
+<script src="js/plugins/jqgrid/jquery.jqGrid.min.js?0820"></script>
+
+<script src="libs/vue/vue.min.js"></script>
+<script src="libs/vue/vue-router.js"></script>
+<script src="js/modules/person_space/person_col.js"></script>
+
+<!-- Page-Level Scripts -->
+<script>
+    $(document).ready(function () {
+
+        $.jgrid.defaults.styleUI = 'Bootstrap';
+
+
+        // Configuration for jqGrid Example 2
+        $("#table_list_2").jqGrid({
+            // 获取数据的地址
+            url: "./data/col_res.json",
+
+            // 从服务器端返回的数据类型
+            datatype: "json",
+
+            // 表格高度
+            height: 450,
+
+            // 如果为ture时，则当表格在首次被创建时会根据父元素比例重新调整表格宽度。
+            autowidth: true,
+
+            // 此属性用来说明当初始化列宽度时候的计算类型，如果为ture，则按比例初始化列宽度
+            shrinkToFit: true,
+
+            // 在grid上显示记录条数，这个参数是要被传递到后台
+            rowNum: 10,
+
+            // 一个数组用来调整表格显示的记录数，此参数值会替代rowNum参数值传给服务器端
+            rowList: [10, 20, 30],
+
+            // 列显示名称，是一个数组对象
+            colNames: ['名称', '网站分类', '个人分类', '大小','上传时间'],
+
+            // 常用到的属性：name 列显示的名称；index 传到服务器端用来排序用的列名称；width 列宽度；align 对齐方式；sortable 是否可以排序
+            colModel: [
+                {
+                    name: 'name',
+                    index: 'name',
+                    editable: true,
+                    width: 150,
+                    search: true
+                },
+                {
+                    name: 'res_category',
+                    index: 'res_category',
+                    editable: true,
+                    width: 50
+                },
+                {
+                    name: 'col_category',
+                    index: 'col_category',
+                    editable: true,
+                    width: 50
+                },
+                {
+                    name: 'size',
+                    index: 'size',
+                    editable: true,
+                    width: 50
+                },
+                {
+                    name: 'time',
+                    index: 'time',
+                    editable: true,
+                    width: 50,
+                    sorttype: "date",
+                    formatter: "date"
+                }
+            ],
+
+            // 定义翻页用的导航栏，必须是有效的html元素。翻页工具栏可以放置在html页面任意位置
+            pager: "#pager_list_2",
+
+            // 定义是否要显示总记录数
+            viewrecords: true,
+
+            // 表格名称
+            caption: "jqGrid 示例2",
+            add: true,
+            edit: true,
+            addtext: 'Add',
+            edittext: 'Edit',
+
+            //向后台请求数据的ajax的类型。可选post,get
+            mtype : "get",
+
+            // 启用或者禁用控制表格显示、隐藏的按钮，只有当caption 属性不为空时起效
+            hidegrid: false
+        });
+
+        // Add selection
+        $("#table_list_2").setSelection(4, true);
+
+
+        // Setup buttons
+        $("#table_list_2").jqGrid('navGrid', '#pager_list_2', {
+            edit: true,
+            add: true,
+            del: true,
+            search: true
+        }, {
+            height: 200,
+            reloadAfterSubmit: true
+        });
+
+        // Add responsive to jqGrid
+        $(window).bind('resize', function () {
+            var width = $('.jqGrid_wrapper').width();
+            $('#table_list_2').setGridWidth(width);
+        });
+    });
+</script>
+</body>
+</html>

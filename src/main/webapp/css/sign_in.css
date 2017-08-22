@@ -1,0 +1,72 @@
+main {
+    width: 100%;
+    /*height: 731px;*/
+    /*背景图铺满屏幕*/
+    background: url('../images/win10.jpg') no-repeat;
+    overflow: hidden;
+    background-size: cover;
+    position: relative;
+}
+
+.form-container{
+    position: absolute;
+    top: 28%;
+    left: 60%;
+    width: 26%;
+}
+
+.form {
+    height: 300px;
+    background-color: #f6f6f6;
+    /*opacity: 0.6;*/
+    box-shadow: 0 2px 16px rgba(0, 0, 0, .5), 0 0 1px rgba(0, 0, 0, .5), 0 0 1px rgba(0, 0, 0, .5);
+    /*box-sizing: border-box;*/
+    padding: 100px 35px 35px 35px;
+    text-align: center;
+    border-radius: 1.5%;
+}
+
+.form-title {
+    width: 101.8%;
+    margin: 120px auto -165px;
+    height: 35px;
+    background-color: #1e50ae;
+    color: #fff;
+    margin-left: -25.3%;
+    position: absolute;
+    top: -105px;
+    left: 126px;
+}
+
+.tngle {
+    width: 0;
+    height: 0;
+    border-width: 6px 0px 6px 6px;
+    /*border-color：定义四个边框的颜色，*/
+    /*border-color: red transparent red transparent;*/
+    /*简写，上下边框为红色，左右边框为透明*/
+    border-color: transparent #9996ca;
+    border-style: solid;
+    border-radius: 5px;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -8px;
+    left: 3px;
+}
+
+.tngle2 {
+    width: 0;
+    height: 0;
+    border-width: 6px 0px 6px 6px;
+    /*border-color：定义四个边框的颜色，*/
+    /*border-color: red transparent red transparent;*/
+    /*简写，上下边框为红色，左右边框为透明*/
+    border-color: transparent #9996ca;
+    border-style: solid;
+    border-radius: 5px;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 31px;
+    left: 3px;
+}
+

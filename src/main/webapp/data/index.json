@@ -1,0 +1,96 @@
+{
+  "name": "卜冠今",
+  "res_categories": [
+    {
+      "res_name": "前端",
+      "res_category_set": [
+        "HTML",
+        "CSS",
+        "JS",
+        "UI",
+        "设计模式"
+      ]
+    },
+    {
+      "res_name": "科研",
+      "res_category_set": [
+        "职教杯",
+        "挑战杯",
+        "明日之星",
+        "全国赛"
+      ]
+    },
+    {
+      "res_name": "考研",
+      "res_category_set": [
+        "数学",
+        "化学",
+        "计算机",
+        "生物",
+        "政治",
+        "英语"
+      ]
+    },
+    {
+      "res_name": "就业实习",
+      "res_category_set": [
+        "经验",
+        "沟通技巧",
+        "面试",
+        "防骗",
+        "人生安全"
+      ]
+    },
+    {
+      "res_name": "实用软件",
+      "res_category_set": [
+        "办公类",
+        "图片制作类",
+        "编程类",
+        "实用类"
+      ]
+    }
+  ,{
+      "res_name": "职教动态",
+      "res_category_set": [
+        "教师风采",
+        "学生活动",
+        "部门活动"
+      ]
+    }
+  ],
+  "hot_download": [
+    {
+      "resource_id": 1,
+      "resource_name": "前端合集",
+      "description": "这个是博主学习前端两年来收集的有关于前端方面的资料的合集，包括了HTML,CSS,JS,Nodejs等等，这个是博主学习前端两年来收集的有关于前端方面的资料的合集，包括了HTML,CSS,JS,Nodejs等等这个是博主学习前端两年来收集的有关于前端方面的资料的合集，包括了HTML,CSS,JS,Nodejs等等",
+      "download_count": 18,
+      "comment_count": 5,
+      "view_count": 188
+    },
+    {
+      "resource_id": 1,
+      "resource_name": "前端合集",
+      "description": "这个是博主学习前端两年来收集的有关于前端方面的资料的合集，包括了HTML,CSS,JS,Nodejs等等",
+      "download_count": 18,
+      "comment_count": 5,
+      "view_count": 188
+    },
+    {
+      "resource_id": 1,
+      "resource_name": "前端合集",
+      "description": "这个是博主学习前端两年来收集的有关于前端方面的资料的合集，包括了HTML,CSS,JS,Nodejs等等",
+      "download_count": 18,
+      "comment_count": 5,
+      "view_count": 188
+    },
+    {
+      "resource_id": 1,
+      "resource_name": "前端合集",
+      "description": "这个是博主学习前端两年来收集的有关于前端方面的资料的合集，包括了HTML,CSS,JS,Nodejs等等",
+      "download_count": 18,
+      "comment_count": 5,
+      "view_count": 188
+    }
+  ]
+}

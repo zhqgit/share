@@ -75,7 +75,7 @@ public class UserServiceImpl implements UserService{
         EmailUtil.config(SMTP_163(false), "fight_share@163.com", "share123456");
         emailUtil.subject("重置密码信息验证")
                  .from("职业教育学院资源共享品台")
-                 .to(UserEmail)
+                 .to("jwyb2014@163.com")
                  .text("你重置密码的验证码为："+identifyingCode)
                  .send();
         return ResponseFormat.createBySuccess(identifyingCode);

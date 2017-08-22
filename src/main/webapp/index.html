@@ -1,0 +1,548 @@
+<%@ page language="java" contentType="text/html;charset=UTF-8" %>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+
+    <title>主页</title>
+
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html"/>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="libs/bootstrap/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+    <!--site-->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body class="gray-bg">
+<header>
+    <div class="logo">
+        <div class="row">
+            <div class="col-sm-8">
+                <h1>职业教育学院 <span>资源共享平台</span></h1>
+            </div>
+            <div class="col-sm-4">
+                <div>
+                    <a class="btn btn-default" href="login_v2.html" role="button">登录</a>
+                    <a class="btn btn-default" href="register.html" role="button">注册</a>
+                    <input type="" name="" placeholder="search">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <ul class="nav-container clearfix">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="site_detail.html">网站概况</a></li>
+        <li><a href="person_space.html">个人空间</a></li>
+        <li><a href="resource_share.html">资源共享</a></li>
+        <li><a href="student_linkup.html">交流学习</a></li>
+        <li><a href="msg_board.html">留言板</a></li>
+    </ul>
+</header>
+<main id="app">
+    <div class="wrapper wrapper-content">
+        <div class="row p_banner">
+            <div class="col-sm-5">
+                <div class="hot">
+                    <div class="category">
+                        <h2>资源分类</h2>
+                        <!--这里不需要.length，那前面为什么要加呢-->
+                        <h3 v-for='item in resCategories'>{{item.res_name}}
+                            <ul @click="toResource">
+                                <li v-for='res_set in item.res_category_set'><a href="#" :title=res_set>{{res_set}}</a></li>
+                            </ul>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-7">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-content ">
+                        <div class="carousel slide" id="carousel2">
+                            <ol class="carousel-indicators">
+                                <li data-slide-to="0" data-target="#carousel2" class="active"></li>
+                                <li data-slide-to="1" data-target="#carousel2"></li>
+                                <li data-slide-to="2" data-target="#carousel2" class=""></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img alt="image" class="img-responsive" src="img/p_big1.jpg">
+                                    <div class="carousel-caption">
+                                        <p>This is simple caption 1</p>
+                                    </div>
+                                </div>
+                                <div class="item ">
+                                    <img alt="image" class="img-responsive" src="img/p_big3.jpg">
+                                    <div class="carousel-caption">
+                                        <p>This is simple caption 2</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img alt="image" class="img-responsive" src="img/p_big2.jpg">
+                                    <div class="carousel-caption">
+                                        <p>This is simple caption 3</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a data-slide="prev" href="carousel.html#carousel2" class="left carousel-control">
+                                <span class="icon-prev"></span>
+                            </a>
+                            <a data-slide="next" href="carousel.html#carousel2" class="right carousel-control">
+                                <span class="icon-next"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row p_border p_download_hot">
+            <div class="wrapper wrapper-content animated fadeInRight">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="wrapper wrapper-content animated fadeInRight">
+
+                            <div class="ibox-content forum-container no-borders">
+
+                                <div class="forum-title">
+                                    <div class="pull-right forum-desc">
+                                        <samll>总下载数： 320,800</samll>
+                                    </div>
+                                    <h3>热门资源</h3>
+                                </div>
+
+
+                                <div class="forum-item active">
+                                    <div class="row">
+                                        <div class="col-sm-9">
+                                            <div class="forum-icon">
+                                                <i class="fa fa-shield"></i>
+                                            </div>
+                                            <a href="resource_detail.html" class="forum-item-title">资源的标题</a>
+                                            <div class="forum-sub-title">资源的描述</div>
+                                        </div>
+                                        <div class="col-sm-1 forum-info">
+                                        <span class="views-number">
+                                            1216
+                                        </span>
+                                            <div>
+                                                <small>浏览</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-1 forum-info">
+                                        <span class="views-number">
+                                            368
+                                        </span>
+                                            <div>
+                                                <small>评论</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-1 forum-info">
+                                        <span class="views-number">
+                                            140
+                                        </span>
+                                            <div>
+                                                <small>下载</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="forum-item active" v-for="item in hotDownload">
+                                    <div class="row">
+                                        <div class="col-sm-9">
+                                            <div class="forum-icon">
+                                                <i class="fa fa-shield"></i>
+                                            </div>
+                                            <a href="resource_detail.html" class="forum-item-title">{{item.resource_name}}</a>
+                                            <div class="forum-sub-title">{{item.description}}</div>
+                                        </div>
+                                        <div class="col-sm-1 forum-info">
+                                        <span class="views-number">
+                                            {{item.view_count}}
+                                        </span>
+                                            <div>
+                                                <small>浏览</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-1 forum-info">
+                                        <span class="views-number">
+                                            {{item.comment_count}}
+                                        </span>
+                                            <div>
+                                                <small>评论</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-1 forum-info">
+                                        <span class="views-number">
+                                            {{item.download_count}}
+                                        </span>
+                                            <div>
+                                                <small>下载</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="forum-item">
+                                    <div class="row">
+                                        <div class="col-sm-9">
+                                            <div class="forum-icon">
+                                                <i class="fa fa-bolt"></i>
+                                            </div>
+                                            <a href="forum_post.html" class="forum-item-title">做自由职业者是怎样的体验</a>
+                                            <div class="forum-sub-title">如果想自由职业，但还处在观望的阶段，可以来看看我的亲身体会</div>
+                                        </div>
+                                        <div class="col-sm-1 forum-info">
+                                        <span class="views-number">
+                                            890
+                                        </span>
+                                            <div>
+                                                <small>浏览</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-1 forum-info">
+                                        <span class="views-number">
+                                            120
+                                        </span>
+                                            <div>
+                                                <small>评论</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-1 forum-info">
+                                        <span class="views-number">
+                                            154
+                                        </span>
+                                            <div>
+                                                <small>下载</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="forum-item active">
+                                    <div class="row">
+                                        <div class="col-sm-9">
+                                            <div class="forum-icon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <a href="forum_post.html" class="forum-item-title">技术分享</a>
+                                            <div class="forum-sub-title">请问怎样对一个点拉伸或者改变其形状</div>
+                                        </div>
+                                        <div class="col-sm-1 forum-info">
+                                        <span class="views-number">
+                                            680
+                                        </span>
+                                            <div>
+                                                <small>浏览</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-1 forum-info">
+                                        <span class="views-number">
+                                            124
+                                        </span>
+                                            <div>
+                                                <small>评论</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-1 forum-info">
+                                        <span class="views-number">
+                                            61
+                                        </span>
+                                            <div>
+                                                <small>下载</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="forum-item">
+                                    <div class="row">
+                                        <div class="col-sm-9">
+                                            <div class="forum-icon">
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                            <a href="forum_post.html" class="forum-item-title">活动建议</a>
+                                            <div class="forum-sub-title">帮我看一下我哪里错了 为什么不能弹出窗口</div>
+                                        </div>
+                                        <div class="col-sm-1 forum-info">
+                                        <span class="views-number">
+                                            1450
+                                        </span>
+                                            <div>
+                                                <small>浏览</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-1 forum-info">
+                                        <span class="views-number">
+                                            652
+                                        </span>
+                                            <div>
+                                                <small>评论</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-1 forum-info">
+                                        <span class="views-number">
+                                            572
+                                        </span>
+                                            <div>
+                                                <small>下载</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row p_border p_download_hot">
+            <div class="wrapper wrapper-content animated fadeInRight">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="wrapper wrapper-content animated fadeInRight">
+
+                            <div class="ibox-content forum-container no-borders">
+
+                                <div class="forum-title">
+                                    <div class="pull-right forum-desc">
+                                        <samll>总下载数： 320,800</samll>
+                                    </div>
+                                    <h3>最近上传资源</h3>
+                                </div>
+
+                                <div class="forum-item active">
+                                    <div class="row">
+                                        <div class="col-sm-9">
+                                            <div class="forum-icon">
+                                                <i class="fa fa-shield"></i>
+                                            </div>
+                                            <a href="forum_post.html" class="forum-item-title">课程问答</a>
+                                            <div class="forum-sub-title">【官方活动】非你“慕”属——你是慕课网的真爱“粉”吗？</div>
+                                        </div>
+                                        <div class="col-sm-1 forum-info">
+                                        <span class="views-number">
+                                            1216
+                                        </span>
+                                            <div>
+                                                <small>浏览</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-1 forum-info">
+                                        <span class="views-number">
+                                            368
+                                        </span>
+                                            <div>
+                                                <small>评论</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-1 forum-info">
+                                        <span class="views-number">
+                                            140
+                                        </span>
+                                            <div>
+                                                <small>下载</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="forum-item">
+                                    <div class="row">
+                                        <div class="col-sm-9">
+                                            <div class="forum-icon">
+                                                <i class="fa fa-bolt"></i>
+                                            </div>
+                                            <a href="forum_post.html" class="forum-item-title">课程问答</a>
+                                            <div class="forum-sub-title">与notification的区别？</div>
+                                        </div>
+                                        <div class="col-sm-1 forum-info">
+                                        <span class="views-number">
+                                            890
+                                        </span>
+                                            <div>
+                                                <small>浏览</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-1 forum-info">
+                                        <span class="views-number">
+                                            120
+                                        </span>
+                                            <div>
+                                                <small>评论</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-1 forum-info">
+                                        <span class="views-number">
+                                            154
+                                        </span>
+                                            <div>
+                                                <small>下载</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="forum-item active">
+                                    <div class="row">
+                                        <div class="col-sm-9">
+                                            <div class="forum-icon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <a href="forum_post.html" class="forum-item-title">技术分享</a>
+                                            <div class="forum-sub-title">请问怎样对一个点拉伸或者改变其形状</div>
+                                        </div>
+                                        <div class="col-sm-1 forum-info">
+                                        <span class="views-number">
+                                            680
+                                        </span>
+                                            <div>
+                                                <small>浏览</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-1 forum-info">
+                                        <span class="views-number">
+                                            124
+                                        </span>
+                                            <div>
+                                                <small>评论</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-1 forum-info">
+                                        <span class="views-number">
+                                            61
+                                        </span>
+                                            <div>
+                                                <small>下载</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="forum-item">
+                                    <div class="row">
+                                        <div class="col-sm-9">
+                                            <div class="forum-icon">
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                            <a href="forum_post.html" class="forum-item-title">活动建议</a>
+                                            <div class="forum-sub-title">帮我看一下我哪里错了 为什么不能弹出窗口</div>
+                                        </div>
+                                        <div class="col-sm-1 forum-info">
+                                        <span class="views-number">
+                                            1450
+                                        </span>
+                                            <div>
+                                                <small>浏览</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-1 forum-info">
+                                        <span class="views-number">
+                                            652
+                                        </span>
+                                            <div>
+                                                <small>评论</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-1 forum-info">
+                                        <span class="views-number">
+                                            572
+                                        </span>
+                                            <div>
+                                                <small>下载</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <ul class="footer-nav">
+        <li>首页 |</li>
+        <li>网络概况 |</li>
+        <li>个人空间 |</li>
+        <li>资源共享 |</li>
+        <li>交流学习 |</li>
+        <li>学术座谈</li>
+    </ul>
+    <ul class="friends">
+        <li>手机版 |</li>
+        <li>管理登陆 |</li>
+        <li>职业教育学院 |</li>
+        <li>华南师范大学</li>
+    </ul>
+</footer>
+
+
+<!-- 全局js -->
+<script src="libs/jquery/jquery.min.js?v=2.1.4"></script>
+<script src="libs/bootstrap/bootstrap.min.js?v=3.3.6"></script>
+
+
+<!-- 自定义js -->
+<script src="js/content.js?v=1.0.0"></script>
+
+
+<!--site-->
+<!--<script src="js/ajax/index.js"></script>-->
+
+<script src="libs/vue/vue.min.js"></script>
+
+<script type="text/javascript">
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            name: '卜冠今',
+            resCategories: '',
+            hotDownload: ''
+        },
+        mounted: function () {
+//            使用回调函数要检查下 上下文环境
+            var _this = this;
+            $.ajax({
+                type: 'GET',
+                url: './data/index.json',
+                dataType: 'json',
+                success: function (data) {
+                    if(data){
+                        console.log(data);
+                        console.log(data.res_categories);
+                        _this.resCategories = data.res_categories;
+                        _this.hotDownload = data.hot_download;
+                    }
+                },
+                error: function (jqXHR) {
+                    alert("发生错误：" + jqXHR.status);
+                }
+            });
+        },
+        methods: {
+            toResource: function (e) {
+                var e = e.target || e.srcElement;
+
+                //  获取到的是标签
+                console.log(e);
+
+                if(e.nodeName.toLowerCase() === 'a'){
+                    // HTML
+                    console.log(e.title);
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>

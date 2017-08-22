@@ -1,0 +1,68 @@
+{
+  "pro_data": {
+    "id": 1,
+    "username": "卜冠今~",
+    "address": "湖北武汉",
+    "intro": "其实我是一个演员",
+    "res_count": 18,
+    "pas_count": 30,
+    "fol_count": 6,
+    "foler_count": 9
+  },
+  "resource_category": [
+    {
+      "resource_id": 1,
+      "resource_name": "jdk1.6",
+      "description": "这个是博主学习前端两年来收集的有关于前端方面的资料的合集，包括了HTML,CSS,JS,Nodejs等等",
+      "upload_time": "2017-08-08 14:41:57"
+    },
+    {
+      "resource_id": 2,
+      "resource_name": "梦的解析电子书",
+      "description": "这个是博主学习前端两年来收集的有关于前端方面的资料的合集，包括了HTML,CSS,JS,Nodejs等等",
+      "upload_time": "2017-08-08 14:41:57"
+    },
+    {
+      "resource_id": 3,
+      "resource_name": "梦的解析电子书",
+      "description": "这个是博主学习前端两年来收集的有关于前端方面的资料的合集，包括了HTML,CSS,JS,Nodejs等等",
+      "upload_time": "2017-08-08 14:41:57"
+    },
+    {
+      "resource_id": 4,
+      "resource_name": "jdk1.6",
+      "description": "这个是博主学习前端两年来收集的有关于前端方面的资料的合集，包括了HTML,CSS,JS,Nodejs等等",
+      "upload_time": "2017-08-08 14:41:57"
+    },
+    {
+      "resource_id": 5,
+      "resource_name": "jdk1.6",
+      "description": "这个是博主学习前端两年来收集的有关于前端方面的资料的合集，包括了HTML,CSS,JS,Nodejs等等",
+      "upload_time": "2017-08-08 14:41:57"
+    },
+    {
+      "resource_id": 4,
+      "resource_name": "jdk1.6",
+      "description": "这个是博主学习前端两年来收集的有关于前端方面的资料的合集，包括了HTML,CSS,JS,Nodejs等等",
+      "upload_time": "2017-08-08 14:41:57"
+    },
+    {
+      "resource_id": 4,
+      "resource_name": "jdk1.6",
+      "description": "这个是博主学习前端两年来收集的有关于前端方面的资料的合集，包括了HTML,CSS,JS,Nodejs等等",
+      "upload_time": "2017-08-08 14:41:57"
+    },
+    {
+      "resource_id": 4,
+      "resource_name": "jdk1.6",
+      "description": "这个是博主学习前端两年来收集的有关于前端方面的资料的合集，包括了HTML,CSS,JS,Nodejs等等",
+      "upload_time": "2017-08-08 14:41:57"
+    },
+    {
+      "resource_id": 4,
+      "resource_name": "jdk1.6",
+      "description": "这个是博主学习前端两年来收集的有关于前端方面的资料的合集，包括了HTML,CSS,JS,Nodejs等等",
+      "upload_time": "2017-08-08 14:41:57"
+    }
+  ]
+}
